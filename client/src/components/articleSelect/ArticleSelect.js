@@ -13,60 +13,13 @@ let url3 = "https://www.jhunewsletter.com/article/2022/09/sga-returns-to-discuss
 function ArticleSelect() {
     return (
         <div id="parent">
-            <Button variant ="primary" type ="submit">
-                <ArticleViewer url ="{articleURL}"/>
-            </Button>
+            <ButtonGroup>
+                <Button onClick = {props.history.push('/articles?url=url1')}> Article 1 </Button>
+                <Button onClick={props.history.push('/articles?url=url2')}> Article 2 </Button>
+                <Button onClick={props.history.push('/articles?url=url3')}>Article3 </Button>
+            </ButtonGroup>
              {/* <button onClick ={openNew}>Article</button> */}
         </div>
     )
 }
-
-const Button = styled.button`
-  /* Same as above */
-`;
-const ButtonToggle = styled(Button)`
-  opacity: 0.6;
-  ${({ active }) =>
-    active &&
-    `
-    opacity: 1;
-  `}
-`;
-const ButtonGroup = styled.div`
-  display: flex;
-  `;
-const types = ['Article 1', 'Article 2', 'Article 3'];
-function ToggleGroup() {
-  const [active, setActive] = useState(types[0]);
-  return (
-    <ButtonGroup>
-      {types.map(type => (
-        <ButtonToggle
-          key={type}
-          active={active === type}
-          onClick={() => setActiveURL(type)}
-        >
-          {type}
-        </ButtonToggle>
-      ))}
-    </ButtonGroup>
-  );
-}
-
-function setActiveURL(type1){
-    setActive(type1)
-    if(type1 == "Article 1"){
-        articleURL = url1
-    }
-    if(type1 == "Article 2"){
-        articleURL = url2
-    }
-    if(type1 == "Article 3"){
-        articleURL = url3
-    }
-}
-
-
-
-
 export default ArticleSelect;
