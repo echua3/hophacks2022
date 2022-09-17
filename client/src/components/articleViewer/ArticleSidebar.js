@@ -8,6 +8,7 @@ function postComment(){
         content = commentArea.value;
     }
     
+    alert("Your post has been processed!");
     console.log(content);
 }
 
