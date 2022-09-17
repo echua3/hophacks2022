@@ -19,13 +19,14 @@ export const NavLink = styled(Link)`
     height: 100%;
     cursor: pointer;
     &.active {
-        color: #4d4dff;
+        color: #FFFFFF;
     }
 `;
 
 
 export const NavMenu = styled.div`
     display: flex;
+    color: #FFFFFF;
     align-items: center;
     margin-right: -24px;
     /* Second Nav */
