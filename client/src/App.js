@@ -5,7 +5,7 @@ import Navbar from './components/navBar';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 import ArticleViewer  from './components/articleViewer/ArticleViewer';
-// import ArticleSelect from './components/articleSelect/ArticleSelect';
+import ArticleSelect from './components/articleSelect/ArticleSelect';
 
 function App() {
   return (
