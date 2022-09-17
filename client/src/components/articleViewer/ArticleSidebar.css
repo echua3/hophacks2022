@@ -1,6 +1,5 @@
 .ArticleSidebar {
     margin: 0;
-    width: 25%;
     height: 100%;
 
     display:flex;
@@ -14,10 +13,19 @@ textarea {
     padding: 15px;
     height: 75%;
 
-    border-radius: 15px;
+    border-radius: 15px 15px 30px 15px;
 }
 
-input.postButton {
+button.postButton {
+    display: flex;
     margin: 15px;
     padding: 15px;
+
+    width: calc(100% - 30px);
+
+    border-radius: 15px;
+    border-width: 0;
+
+    color:darkslateblue;
+    background-color:cornflowerblue;
 }
