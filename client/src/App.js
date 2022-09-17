@@ -1,12 +1,11 @@
 import './App.css';
-import ArticleComment from './components/ArticleComment';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CommentFeed from './components/CommentFeed';
 
 function App() {
   return (
     <div>
-      <ArticleComment/>
-      <ArticleComment/>
+      <CommentFeed/>
     </div>
   );
 }

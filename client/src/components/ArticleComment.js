@@ -7,7 +7,7 @@ function ArticleComment() {
     <Card className="text-left">
       <Card.Header>User</Card.Header>
       <Card.Body>
-        <Card.Title>Awesome Article</Card.Title>
+        <Card.Title>Article</Card.Title>
         <Card.Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quam felis, elementum eu euismod sit amet, semper non diam. Mauris nec viverra eros. Mauris rhoncus, diam nec viverra malesuada, tortor ante egestas libero, quis iaculis diam nibh at quam. Donec sed nulla consectetur, maximus augue id, blandit sapien. Mauris condimentum.
         </Card.Text>
