@@ -41,7 +41,7 @@ function App() {
     <Navbar />
     <Routes>
         {/* <Route exact path='/' exact element={<Home />} /> */}
-        <Route path='/articles' element={<ArticleSelect/>} />
+        <Route path='/' element={<ArticleSelect/>} />
         <Route path='/posts' element={<CommentFeed/>} />  
         <Route path='/view' element={<ArticleViewer/>} />  
        

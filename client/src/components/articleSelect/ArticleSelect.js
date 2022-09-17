@@ -18,20 +18,24 @@ class ArticleSelect extends Component {
     render() {
         return (
             <div id="parent">
-                <ButtonGroup>
                 <Link to={"/view?url=" + url1}>
                     <Button className="artButton" name="artButton" size="lg" variant="info">
-                        <img src={"https://snworksceo.imgix.net/jhn/2e71f3f9-6a24-4206-a547-d942eada016d.sized-1000x1000.jpg?w=1000"} alt="add item" width="200"/>Article 1</Button>
+                        <img src={"https://snworksceo.imgix.net/jhn/2e71f3f9-6a24-4206-a547-d942eada016d.sized-1000x1000.jpg?w=1000"} alt="add item" width="200"/>
+                        Article 1
+                    </Button>
                 </Link>
                 <Link to={"/view?url=" + url2}>
                     <Button className="artButton" name="artButton" size="lg" variant="info"> 
-                    <img src={"	https://snworksceo.imgix.net/jhn/4ee5da38-d3f3-49e3-89ec-8cb6aa6b586e.sized-1000x1000.jpeg?w=1000"} alt="add item" width="250"/>Article 2</Button>
+                        <img src={"	https://snworksceo.imgix.net/jhn/4ee5da38-d3f3-49e3-89ec-8cb6aa6b586e.sized-1000x1000.jpeg?w=1000"} alt="add item" width="250"/>
+                        Article 2
+                    </Button>
                 </Link>
                 <Link to={"/view?url=" + url3}>
                     <Button className="artButton" name="artButton" size="lg" variant="info">
-                        <img src={"https://snworksceo.imgix.net/jhn/e8cadb8b-e1a9-4ef8-954b-692a10952c92.sized-1000x1000.png?w=1000"} alt="add item" width="200"/>Article 3</Button>
+                        <img src={"https://snworksceo.imgix.net/jhn/e8cadb8b-e1a9-4ef8-954b-692a10952c92.sized-1000x1000.png?w=1000"} alt="add item" width="200"/>
+                        Article 3
+                    </Button>
                 </Link>
-                </ButtonGroup>
             </div>
         )
     }
