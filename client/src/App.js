@@ -16,6 +16,7 @@ function App() {
         {/* <Route path='/articles' element={<ArticleSelect/>} /> */}
         <Route path='/posts' element={<CommentFeed/>} />  
         <Route path='/view' element={<ArticleViewer/>} />  
+        <Route path='/select' element={<ArticleSelect/>} />  
     </Routes>
     </Router>
   );
