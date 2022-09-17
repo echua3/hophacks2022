@@ -1,4 +1,3 @@
-import React from 'react';
 import Card from 'react-bootstrap/Card';
 import React, { useState } from 'react';
 import styled from 'styled-components'; // do we actually have a styled?
