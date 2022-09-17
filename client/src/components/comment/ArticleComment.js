@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 function ArticleComment() {
   return (
-    <Card className="text-left" style={{ width: '18rem' }}>
+    <Card className="text-left" style={{ width: '25rem' }}>
       <Card.Header>User</Card.Header>
       <Card.Body>
         <Card.Title>Comment</Card.Title>
