@@ -1,0 +1,11 @@
+.ArticleViewer {
+    margin: 0;
+    padding: 15px 0 15px 15px; /* no padding on bottom */
+    width: 75%;
+    height: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
