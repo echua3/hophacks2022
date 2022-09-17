@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 //import styled from 'styled-components'; // do we actually have a styled?
 import Button from 'react-bootstrap/Button';
 //import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 
 let url1 = "https://www.jhunewsletter.com/article/2022/09/sga-returns-to-discuss-welcome-event-for-all-students"
 let url2 = "https://hub.jhu.edu/2022/09/12/flu-vaccine-mandate-2022/"
