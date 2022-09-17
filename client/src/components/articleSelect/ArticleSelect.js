@@ -1,3 +1,4 @@
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import React, { useState } from 'react';
 import styled from 'styled-components'; // do we actually have a styled?
@@ -6,7 +7,8 @@ import ArticleViewer from '../articleViewer/ArticleViewer';
 
 let articleURL = "https://getbootstrap.com/docs/3.4/css/" //test URL
 let url1 = "https://www.jhunewsletter.com/article/2022/09/sga-returns-to-discuss-welcome-event-for-all-students"
-let url2 = 
+let url2 = "https://www.jhunewsletter.com/article/2022/09/sga-returns-to-discuss-welcome-event-for-all-students"
+let url3 = "https://www.jhunewsletter.com/article/2022/09/sga-returns-to-discuss-welcome-event-for-all-students"
 
 function ArticleSelect() {
     return (
@@ -42,13 +44,26 @@ function ToggleGroup() {
         <ButtonToggle
           key={type}
           active={active === type}
-          onClick={() => setActive(type)}
+          onClick={() => setActiveURL(type)}
         >
           {type}
         </ButtonToggle>
       ))}
     </ButtonGroup>
   );
+}
+
+function setActiveURL(type1){
+    setActive(type1)
+    if(type1 == "Article 1"){
+        articleURL = url1
+    }
+    if(type1 == "Article 2"){
+        articleURL = url2
+    }
+    if(type1 == "Article 3"){
+        articleURL = url3
+    }
 }
 
 
