@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import Card from 'react-bootstrap/Card';
 //import styled from 'styled-components'; // do we actually have a styled?
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
@@ -18,7 +17,6 @@ class ArticleSelect extends Component {
     render() {
         return (
             <div id="parent">
-                
                 <ButtonGroup>
                 <a href={"/view?url=" + url1} target="_blank">
                     <Button className="artButton" name="artButton"> Article 1</Button>
