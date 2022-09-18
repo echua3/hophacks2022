@@ -9,13 +9,17 @@ const splodeSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  content: {
+    type: String,
+    minlength: 100
+  },
   votes: {
     Type: Number,
   },
-  user: {
-    Type: mongoose.Schema.Types.ObjectID,
-    ref: "User",
-  },
+//   user: {
+//     Type: mongoose.Schema.Types.ObjectID,
+//     ref: "User",
+//   },
   thumbEmoji: {
     Type: Number,
   },
@@ -27,4 +31,4 @@ const splodeSchema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("User", splodeSchema);
+module.exports = mongoose.model("Splode", splodeSchema);

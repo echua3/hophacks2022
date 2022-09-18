@@ -22,4 +22,46 @@ splodeRouter.post("/", async (request, response) => {
   if (!body.happyEmoji) {
     body.happyEmoji = 0;
   }
+
+  const splode = new Splode({
+    headline: body.headline,
+    url: body.url,
+    content: body.content,
+    votes: body.votes,
+    thumbEmoji: body.thumbEmoji,
+    happyEmoji: body.happyEmoji,
+  });
+
+  const savedSplode = await blog.save();
+  console.log(`added ${splode.headline} to the dash`);
+
+  response.json(savedSplode.toJSON());
 });
+
+splodeRouter.put("/:id", async (request, response) => {
+  const body = request.body;
+
+  if (!body.likes) {
+    body.likes = 0;
+  }
+
+  const splodeToUpdate = await Splode.findById(request.params.id);
+
+  const splode = {
+    headline: body.headline,
+    url: body.url,
+    content: body.content,
+    votes: body.votes,
+    thumbEmoji: body.thumbEmoji,
+    happyEmoji: body.happyEmoji,
+    thumbnailImage: body.thumbnailImage,
+  };
+
+  const updatedSplode = await Blog.findByIdAndUpdate(request.params.id, blog, {
+    new: true,
+  });
+  console.log(`splode ${blog.title} succesfully updated`);
+  response.json(updatedSplode.toJSON());
+});
+
+module.export = splodeRouter;
