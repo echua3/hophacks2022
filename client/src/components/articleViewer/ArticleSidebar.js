@@ -1,8 +1,14 @@
 import './ArticleSidebar.css';
 
 function postComment(){
-    let content = getElementById("commentArea").value;
+    let commentArea = document.getElementById("commentArea");
+
+    let content = "I'm null!";
+    if (commentArea) {
+        content = commentArea.value;
+    }
     
+    alert("Your post has been processed!");
     console.log(content);
 }
 
@@ -10,7 +16,7 @@ function ArticleSidebar() {
   return (
     <div className="ArticleSidebar">
         <textarea id="commentArea" placeholder="Share your thoughts..."></textarea>
-        <input className="postButton" type="button" onclick="postComment()">Post</input>
+        <button className="postButton" name="postButton" onClick={ postComment }>Post!</button>
     </div>
   );
 }

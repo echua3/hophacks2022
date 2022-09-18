@@ -1,25 +1,43 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import React, { useState } from 'react';
-import styled from 'styled-components'; // do we actually have a styled?
+import React, { Component } from 'react';
+//import styled from 'styled-components'; // do we actually have a styled?
 import Button from 'react-bootstrap/Button';
-import ArticleViewer from '../articleViewer/ArticleViewer';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import { Link } from 'react-router-dom'
+//import {Link} from 'react-router-dom';
+import './ArticleSelect.css';
 
-let articleURL = "https://getbootstrap.com/docs/3.4/css/" //test URL
 let url1 = "https://www.jhunewsletter.com/article/2022/09/sga-returns-to-discuss-welcome-event-for-all-students"
-let url2 = "https://www.jhunewsletter.com/article/2022/09/sga-returns-to-discuss-welcome-event-for-all-students"
-let url3 = "https://www.jhunewsletter.com/article/2022/09/sga-returns-to-discuss-welcome-event-for-all-students"
+let url2 = "https://www.jhunewsletter.com/article/2022/09/rain-or-shine-mens-soccer-remains-unbeaten-after-weekend-doubleheader"
+let url3 = "https://www.jhunewsletter.com/article/2022/09/dont-get-cocky-blue-jays-rank-is-just-a-number"
 
-function ArticleSelect() {
-    return (
-        <div id="parent">
-            <ButtonGroup>
-                <Button onClick = {props.history.push('/articles?url=url1')}> Article 1 </Button>
-                <Button onClick={props.history.push('/articles?url=url2')}> Article 2 </Button>
-                <Button onClick={props.history.push('/articles?url=url3')}>Article3 </Button>
-            </ButtonGroup>
-             {/* <button onClick ={openNew}>Article</button> */}
-        </div>
-    )
+class ArticleSelect extends Component {
+    constructor(props){
+        super(props);
+    }
+
+    render() {
+        return (
+            <div id="parent">
+                <Link to={"/view?url=" + url1}>
+                    <Button className="artButton" name="artButton" size="lg" variant="info">
+                        <img src={"https://snworksceo.imgix.net/jhn/2e71f3f9-6a24-4206-a547-d942eada016d.sized-1000x1000.jpg?w=1000"} alt="add item" width="200"/>
+                        Article 1
+                    </Button>
+                </Link>
+                <Link to={"/view?url=" + url2}>
+                    <Button className="artButton" name="artButton" size="lg" variant="info"> 
+                        <img src={"	https://snworksceo.imgix.net/jhn/4ee5da38-d3f3-49e3-89ec-8cb6aa6b586e.sized-1000x1000.jpeg?w=1000"} alt="add item" width="250"/>
+                        Article 2
+                    </Button>
+                </Link>
+                <Link to={"/view?url=" + url3}>
+                    <Button className="artButton" name="artButton" size="lg" variant="info">
+                        <img src={"https://snworksceo.imgix.net/jhn/e8cadb8b-e1a9-4ef8-954b-692a10952c92.sized-1000x1000.png?w=1000"} alt="add item" width="200"/>
+                        Article 3
+                    </Button>
+                </Link>
+            </div>
+        )
+    }
 }
 export default ArticleSelect;
